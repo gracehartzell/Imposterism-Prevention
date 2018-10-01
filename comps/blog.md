@@ -70,3 +70,6 @@ exports.down = function(knex, Promise) {
 
 *First, if you see that and immediately think I'm crazy for not knowing the right way to do it, you're probably right and I'd love for you to guide me in the right direction. Unfortunately, my main (possibly only) audience is my Github repo, so I'll keep poking elsewhere.*
 I'm particularly drawn to the first option because that way, I can actually go through and get some much needed practice with objects and it just doesn't look as mangled and foreboding. 
+
+## Day Two (AKA 1st October):
+So I had a little chat and realized that neither of my aforementioned methods of making a quiz bank were good. There's now a data folder with my test questions in a .json file. 
