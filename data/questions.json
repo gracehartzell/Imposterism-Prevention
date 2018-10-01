@@ -1,0 +1,160 @@
+{
+    "name": "JavaScript Scope",
+    "questionCount":10,
+    "questions": [
+        {
+            "id":1,
+            "choices": [
+                {"text":"10","isAnswer":false},
+                {"text":"20","isAnswer":false},
+                {"text":"30","isAnswer":true},
+                {"text":"40","isAnswer":false},
+                {"text":"50","isAnswer":false}
+            ],
+            "content":"After the following code runs, what will be the value of `result`?\n\n```javascript\nvar x = 30;\n\nfunction get () { return x; }\n\nvar result = get(20);\n```",
+            "index":0,
+            "isCorrect":false,
+            "answer": 
+                {"expected":[2], "actual":[]}
+        },
+    
+        { 
+            "id":2,
+            "choices": [
+                { "text":"10", "isAnswer":false},
+                {"text":"20", "isAnswer":true},
+                {"text":"30", "isAnswer":false},
+                {"text":"40", "isAnswer":false},
+                {"text":"50", "isAnswer":false}
+            ],
+            "content":"After the following code runs, what will be the value of `result`?\n\n```javascript\nvar x = 30;\n\nfunction get (x) { return x; }\n\nvar result = get(20);\n```",
+            "index":1,
+            "isCorrect":false,
+            "answer": {
+                "expected":[1],"actual":[]}
+        },
+        {
+            "id":3,
+            "choices":[
+                {"text":"10", "isAnswer":false},
+                {"text":"20", "isAnswer":false},
+                {"text":"30", "isAnswer":true},
+                {"text":"40", "isAnswer":false},
+                {"text":"50", "isAnswer":false}
+            ],
+            "content":"After the following code runs, what will be the value of `result`?\n\n```javascript\nvar x = 30;\n\nfunction get () { return x; }\nfunction set (value) { var x = value; }\n\nset(10);\nvar result = get(20);\n```",
+            "index":2,
+            "isCorrect":false,
+            "answer": {
+                "expected":[2], "actual":[]}
+        },
+            
+        {
+            "id":4,
+            "choices":[
+                {"text":"10","isAnswer":true},
+                {"text":"20","isAnswer":false},
+                {"text":"30","isAnswer":false},
+                {"text":"40","isAnswer":false},
+                {"text":"50","isAnswer":false}
+            ],
+            "content":"After the following code runs, what will be the value of `result`?\n\n```javascript\nvar x = 30;\n\nfunction get () { return x; }\nfunction set (value) { x = value; }\n\nset(10);\nvar result = get(20);\n```",
+            "index":3,
+            "isCorrect":false,
+            "answer":{
+                "expected":[0], "actual":[]}
+        },
+            
+        {
+            "id":5,
+            "choices":[
+                {"text":"10","isAnswer":false},
+                {"text":"20","isAnswer":true},
+                {"text":"30","isAnswer":false},
+                {"text":"40","isAnswer":false},
+                {"text":"50","isAnswer":false}
+            ],
+            "content":"After the following code runs, what will be the value of `result`?\n\n```javascript\nvar x = 30;\n\nfunction get (x) { return x; }\nfunction set (value) { x = value; }\n\nset(10);\nvar result = get(20);\n```",
+            "index":4,
+            "isCorrect":false,
+            "answer":{
+                "expected":[1], "actual":[]}
+        },
+            
+        {
+            "id":6,
+            "choices":[
+                {"text":"5","isAnswer":false},
+                {"text":"10","isAnswer":false},
+                {"text":"15","isAnswer":false},
+                {"text":"20","isAnswer":false},
+                {"text":"25","isAnswer":false},
+                {"text":"30","isAnswer":true}
+            ],
+            "content":"After the following code runs, what will be the value of `result`?\n\n```javascript\nvar x = 10;\n\nfunction add (y) {\n  return x + y;\n}\n\nfunction strangeAdd (x) {\n  return add(x) + add(x);\n}\n\nvar result = strangeAdd(5);\n```",
+            "index":5,
+            "isCorrect":false,
+            "answer":{
+                "expected":[5], "actual":[]}
+        },
+            
+        {
+            "id":7,
+            "choices":[
+                {"text":"10","isAnswer":false},
+                {"text":"20","isAnswer":true},
+                {"text":"30","isAnswer":false}
+            ],
+            "content":"After the following code runs, what will be the value of `result`?\n\n```javascript\nvar x = 10;\n\nfunction outer () {\n  var x = 20;\n  function inner () {\n    return x;\n  }\n  return inner();\n}\n\nvar result = outer();\n```",
+            "index":6,
+            "isCorrect":false,
+            "answer":{
+                "expected":[1], "actual":[]}
+        },
+            
+        {
+            "id":8,
+            "choices":[
+                {"text":"10","isAnswer":true},
+                {"text":"20","isAnswer":false},
+                {"text":"30","isAnswer":false},
+                {"text":"40","isAnswer":false}
+            ],
+            "content":"After the following code runs, what will be the value of `result`?\n\n```javascript\nvar x = 10;\n\nfunction outer () {\n  var x = 20;\n  function inner () {\n    x = x + 10;\n    return x;\n  }\n  inner();\n}\n\nouter();\n\nvar result = x;\n```",
+            "index":7,
+            "isCorrect":false,
+            "answer":{
+                "expected":[0], "actual":[]}
+        },
+            
+        {
+            "id":9,
+            "choices":[
+                {"text":"10","isAnswer":false},
+                {"text":"20","isAnswer":true},
+                {"text":"30","isAnswer":false},
+                {"text":"40","isAnswer":false}
+            ],
+            "content":"After the following code runs, what will be the value of `result`?\n\n```javascript\nvar x = 10;\n\nfunction outer () {\n  x = 20;\n  function inner () {\n    var x = x + 20;\n    return x;\n  }\n  inner();\n}\n\nouter();\n\nvar result = x;\n```",
+            "index":8,
+            "isCorrect":false,
+            "answer":{
+                "expected":[1],"actual":[]}
+        },
+            
+        {
+            "id":10,
+            "choices":[
+                {"text":"10","isAnswer":false},
+                {"text":"20","isAnswer":false},
+                {"text":"30","isAnswer":false},
+                {"text":"40","isAnswer":true}
+            ],
+            "content":"After the following code runs, what will be the value of `result`?\n\n```javascript\nvar x = 10;\n\nfunction outer () {\n  x = 20;\n  function inner () {\n    x = x + 20;\n  }\n  inner();\n}\n\nouter();\n\nvar result = x;\n```",
+            "index":9,
+            "isCorrect":false,
+            "answer":{
+                "expected":[3],"actual":[]}
+        }
+    ]
+}
