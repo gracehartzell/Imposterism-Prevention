@@ -4,7 +4,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 
 const environment = process.env.NODE_ENV || 'development';
-const portOptions = {development: 8000, test: 6000};
+const portOptions = {development: 3000, test: 6000};
 const defaultPort = portOptions[environment];
 const port = process.env.PORT || defaultPort;
 
@@ -12,9 +12,14 @@ const knexPath = path.join(__dirname, 'knexfile.js');
 const app = express();
 const knex = require('./db/knex');
 
+const login = require('./routes/user_route');
+app.use(login);
+const quiz = require('./routes/quiz_route')
+app.use(quiz);
+
 app.use(methodOverride('_method'))
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join('public')));
 

@@ -6,7 +6,7 @@ Quarter projects were approaching and I hadn't the slightest idea of what to do 
 ## Ground Zero:
 
 
-## Day One(ish):
+## Day One, *The Tea Tantrum*:
 I set up the layout for the app in the same way as we've done in previous exercises (aka [Killbase](https://grace-killbase.herokuapp.com/)). Here's where I encountered my *FIRST MAJOR ROADBLOCK*: ERDs, quiz banks, and Postgres... Oh my! In particular, how am I going to make all the right formatting that I can do with JS with this table? Here's what I was looking at working with:
 
 **Option 1:**
@@ -71,5 +71,15 @@ exports.down = function(knex, Promise) {
 *First, if you see that and immediately think I'm crazy for not knowing the right way to do it, you're probably right and I'd love for you to guide me in the right direction. Unfortunately, my main (possibly only) audience is my Github repo, so I'll keep poking elsewhere.*
 I'm particularly drawn to the first option because that way, I can actually go through and get some much needed practice with objects and it just doesn't look as mangled and foreboding. 
 
-## Day Two (AKA 1st October):
+## Day Two (1 October, *Slug Day*):
 So I had a little chat and realized that neither of my aforementioned methods of making a quiz bank were good. There's now a data folder with my test questions in a .json file. 
+
+
+## Day Three, *The Morning Meltdown*
+As the alternate title would suggest, I had a meltdown this morning. Not being able to get a navbar done the exact way I wanted it was what set it off. It was very silly because I've done some neat navbars before. As a result, I decided to completely back off from doing any styling and go back to trying to get the quiz table and pages to work. That said, I found a Medium article by Robbie Jaeger entitled [*Seed Knex PostgreSQL Database with JSON Data*](https://medium.com/@jaeger.rob/seed-knex-postgresql-database-with-json-data-3677c6e7c9bc). 
+
+Two things you should note: 
+1. One of the quiz topics is JS promises.
+2. Database queries are promise-based. 
+
+See what I did there? 
