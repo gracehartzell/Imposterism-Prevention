@@ -83,3 +83,4 @@ Two things you should note:
 2. Database queries are promise-based. 
 
 See what I did there? 
+So I ended up spending the entire day trying to figure out how to get this enormous JSON file to work with my database. Long story short, my biggest accomplishment/progress was completing all 24 levels of Flexbox Froggy and getting my cat to agree to share the office chair instead of her kicking me out. Today was one of 'those' days where it feels like nothing was accomplished other than tearing me down.  

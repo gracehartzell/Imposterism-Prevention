@@ -1,16 +1,23 @@
-<%- include('partials/navbar') %>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Brain Juice</title>
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Brain Juice</title>
+        <link rel="stylesheet" href="/styles/style.css">
+    </head>
+    <body>
 
-<h1>Quiz Page</h1>
-
+    <%- include('partials/navbar') %>
+    <h1>Quiz Page</h1>
     
-</body>
+    <div style="display: flex; flex-direction: column">
+      <% quizzes.forEach((quiz) => { %>
+        <%- include('partials/quiz', { quiz: quiz }) %>
+      <% }); %>
+    </div>
+
+
+    <script src="/quizzes.js"></script>
+    </body>
 </html> 
