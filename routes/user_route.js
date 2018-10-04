@@ -5,8 +5,7 @@ const knex = require('../db/knex');
 
 
 // GENERAL/BASE LEVEL
-router.get('/profile', (req, res) => {
-    // knex('questions')
+router.get('/user', (req, res) => {
         res.render('users/user')
 });
 
@@ -15,6 +14,9 @@ router.get('/heh', (req, res) => {
       res.render('heh')
 });
 
+router.get('/profile', (req, res, next) => {
+  res.render('users/profile');
+});
 
 // router.post('/', (req, res, next) => {
 //     bcrypt.hash(req.body.password, 12)
@@ -36,9 +38,10 @@ router.get('/heh', (req, res) => {
 //   });
   
 // ADD NEW USER:
-router.post('/profile', (req, res, next) => {
+router.post('/profile/:id', (req, res, next) => {
   knex('users')
     .insert({
+      name: req.body.name,
       email: req.body.email,
       password: req.body.password
     })

@@ -1,26 +1,11 @@
 console.warn('CONNECTED');
 
-let button = document.getElementById('answerChoice');
+const button = document.getElementById('answerChoice');
+button.addEventListener('click', () => {
+  document.getElementById('quiz').innerHTML = 'HELLO';
+});
+console.warn(question.choices);
 
-
-for (var i = 0 ; i < button.length; i++) {
-    button[i].addEventListener('click' , (ev) => {
-        return correctAnswer();
-    }) ; 
-}
-
-
-
-function correctAnswer() {
-    if (button === 'true') {
-        console.warn('CORRECT ANSWER');
-    }
-    else {
-        alert('NOPE');
-    }
-}
-
-
-// const quizContainer = document.getElementById('quiz');
-// const resultsContainer = document.getElementById('results');
-// const submitButton = document.getElementById('submit');
+// var converter = new showdown.Converter(),
+//     text = '# hello, markdown!',
+//     html = converter.makeHtml(text);

@@ -22,24 +22,6 @@
             </div>
         </div>
 
-            <!-- <div style="display: flex; justify-content: space-around;  border: solid purple;"> -->
-      <% quizzes.forEach((quiz) => { %>
-<!-- 
-        <div style="display: flex; flex-direction: column; border:solid red; text-align: center; ">
-            <a href="/quiz/<%=quiz.id%>" style="flex: 1;">
-                <h2 id="quizName"><%= quiz.name %></h2>
-            </a>
-
-            <div style="border: dashed grey;">
-                <h3>Difficulty: <%= quiz.difficulty %></h3>
-                <h3>Question Count: <%= quiz.question_count %></h3>
-            </div>
-        </div>
-
-      <% }); %>
-    </div> -->
-
-    
     <section class="gallery-block cards-gallery"> 
         <div class="container">
             <div class="heading">
@@ -52,12 +34,10 @@
                 <div class="card border-0 transform-on-hover">
                     <a href="/quiz/<%=quiz.id%>"><h2 id="quizName"><%= quiz.name %></h2></a>
                     <div class="card-body">
-
                         <p class="text-muted card-text"> 
                             Difficulty: <%= quiz.difficulty %><br>
                             Question Count: <%= quiz.question_count %><br>
                         </p>
-
                     </div>
                 </div>
             </div>
