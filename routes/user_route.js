@@ -11,7 +11,6 @@ router.get('/user', (req, res) => {
 });
 
 router.get('/heh', (req, res) => {
-  // knex('questions')
   res.render('heh');
 });
 
@@ -37,7 +36,7 @@ router.get('/profile', (req, res) => {
 // });
 
 // ADD NEW USER:
-router.post('/new_user', (req, res) => knex('users')
+router.post('/user_login', (req, res) => knex('users')
   .insert({
     name: req.body.name,
     email: req.body.email,

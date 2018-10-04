@@ -1,10 +1,18 @@
-console.warn('CONNECTED');
+console.log('CONNECTED');
+const questions = quiz.questions;
 
-const button = document.getElementById('answerChoice');
-button.addEventListener('click', () => {
-  document.getElementById('quiz').innerHTML = 'HELLO';
+const buttons = Array.from(document.getElementsByClassName('answerChoice'));
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    console.log(questions);
+    
+  });
 });
-console.warn(question.choices);
+
+
+
+
+
 
 // var converter = new showdown.Converter(),
 //     text = '# hello, markdown!',

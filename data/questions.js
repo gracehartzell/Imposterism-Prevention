@@ -7,13 +7,13 @@ const questions =[
             {
                 "id":1,
                 "choices": [
-                    {"text":"`[\"JS\", \"NODE\", \"MITHRIL\"]`","isAnswer":false},
-                    {"text":"`[\"js\", \"node\", \"mithril\"]`","isAnswer":false},
-                    {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"MITHRIL\"]`","isAnswer":false},
-                    {"text":"a Promise object that resolves with `[\"js\", \"node\", \"mithril\"]`","isAnswer":true},
+                    {"text":"`[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":false},
+                    {"text":"`[\"js\", \"node\", \"react\"]`","isAnswer":false},
+                    {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":false},
+                    {"text":"a Promise object that resolves with `[\"js\", \"node\", \"react\"]`","isAnswer":true},
                     {"text":"a Promise object that resolves with `null`","isAnswer":false}
                 ],
-                "content":"Assume `fetchTags()` returns a Promise that will eventually resolve with `[\"js\", \"node\", \"mithril\"]`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n",
+                "content":"Assume `fetchTags()` returns a Promise that will eventually resolve with `[\"js\", \"node\", \"react\"]`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n",
                 "code_snippet": "\nvar result = fetchTags() \n  .then(function(tags) { \n    return tags\n  })\n",
                 "index":0,
                 "isCorrect":false,
@@ -24,13 +24,13 @@ const questions =[
             { 
                 "id":2,
                 "choices": [
-                    {"text":"`[\"JS\", \"NODE\", \"MITHRIL\"]`","isAnswer":false},
-                    {"text":"`[\"js\", \"node\", \"mithril\"]`","isAnswer":false},
+                    {"text":"`[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":false},
+                    {"text":"`[\"js\", \"node\", \"react\"]`","isAnswer":false},
                     {"text":"`null`","isAnswer":false},
-                    {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"MITHRIL\"]`","isAnswer":false},
-                    {"text":"a Promise object that resolves with `[\"js\", \"node\", \"mithril\"]`","isAnswer":true}
+                    {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":false},
+                    {"text":"a Promise object that resolves with `[\"js\", \"node\", \"react\"]`","isAnswer":true}
                 ],
-                "content":"Assume `fetchTags()` returns a Promise that will eventually resolve with `[\"js\", \"node\", \"mithril\"]`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n    ",
+                "content":"Assume `fetchTags()` returns a Promise that will eventually resolve with `[\"js\", \"node\", \"REACT\"]`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n    ",
                 "code_snippet": "var result = fetchTags();",
                 "index":1,
                 "isCorrect":false,
@@ -40,13 +40,13 @@ const questions =[
             {
                 "id":3,
                 "choices":[
-                    {"text":"`[\"JS\", \"NODE\", \"MITHRIL\"]`","isAnswer":false},
-                    {"text":"`[\"js\", \"node\", \"mithril\"]`","isAnswer":false},
+                    {"text":"`[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":false},
+                    {"text":"`[\"js\", \"node\", \"REACT\"]`","isAnswer":false},
                     {"text":"`null`","isAnswer":false},
-                    {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"MITHRIL\"]`","isAnswer":true},
-                    {"text":"a Promise object that resolves with `[\"js\", \"node\", \"mithril\"]`","isAnswer":false}
+                    {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":true},
+                    {"text":"a Promise object that resolves with `[\"js\", \"node\", \"react\"]`","isAnswer":false}
                 ],
-                "content":"Assume `fetchTags()` returns a Promise that will eventually resolve with `[\"js\", \"node\", \"mithril\"]`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n",
+                "content":"Assume `fetchTags()` returns a Promise that will eventually resolve with `[\"js\", \"node\", \"react\"]`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n",
                 "code_snippet": "\nvar result = fetchTags()\n  .then(function(tags) { \n\n return tags.map(toUpperCase)\n  })\n\nfunction toUpperCase (str) { return str.toUpperCase() }\n",
                 "index":2,
                 "isCorrect":false,
@@ -57,13 +57,13 @@ const questions =[
             {
                 "id":4,
                 "choices":[
-                    {"text":"`[\"JS\", \"NODE\", \"MITHRIL\"]`","isAnswer":true},
-                    {"text":"`[\"js\", \"node\", \"mithril\"]`","isAnswer":false},
+                    {"text":"`[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":true},
+                    {"text":"`[\"js\", \"node\", \"react\"]`","isAnswer":false},
                     {"text":"`null`","isAnswer":false},
-                    {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"MITHRIL\"]`","isAnswer":false},
-                    {"text":"a Promise object that resolves with `[\"js\", \"node\", \"mithril\"]`","isAnswer":false}
+                    {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":false},
+                    {"text":"a Promise object that resolves with `[\"js\", \"node\", \"react\"]`","isAnswer":false}
                 ],
-                "content":"Assume `fetchTags()` returns a Promise that will eventually resolve with `['js', 'node', 'mithril']`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n\n",
+                "content":"Assume `fetchTags()` returns a Promise that will eventually resolve with `['js', 'node', 'REACT']`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n\n",
                 "code_snippet": "```javascript\nvar result = null;\nfetchTags()\n  .then(function(tags) {\n    return tags.map(toUpperCase);\n  })\n  .then(function(tags) {\n    result = tags\n  })\n\nfunction toUpperCase (str) { return str.toUpperCase() }\n```",
                 "index":3,
                 "isCorrect":false,
@@ -74,13 +74,13 @@ const questions =[
             {
                 "id":5,
                 "choices":[
-                    {"text":"`[\"JS\", \"NODE\", \"MITHRIL\"]`","isAnswer":false},
-                    {"text":"`[\"js\", \"node\", \"mithril\"]`","isAnswer":false},
+                    {"text":"`[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":false},
+                    {"text":"`[\"js\", \"node\", \"REACT\"]`","isAnswer":false},
                     {"text":"`null`","isAnswer":false},
-                    {"text":"a Promise object that resolves with `[\"js\", \"node\", \"mithril\"]`","isAnswer":true},
-                    {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"MITHRIL\"]`","isAnswer":false}
+                    {"text":"a Promise object that resolves with `[\"js\", \"node\", \"react\"]`","isAnswer":true},
+                    {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":false}
                 ],
-                "content":"Assume `fetchTags()` returns a Promise that eventually will resolve with `[\"js\", \"node\", \"mithril\"]`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n",
+                "content":"Assume `fetchTags()` returns a Promise that eventually will resolve with `[\"js\", \"node\", \"REACT\"]`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n",
                 "code_snippet": "```javascript\nvar result = fetchTags()\n\nresult.then(function(tags) {\n  return tags.map(toUpperCase)\n})\n\nfunction toUpperCase (str) { return str.toUpperCase() }\n```",
                 "index":4,
                 "isCorrect":false,
