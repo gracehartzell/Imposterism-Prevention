@@ -29,12 +29,13 @@
           </a>
         </div>
         
-        <form class="email-login">
+        <form class="email-login" method="GET" action="/returning_user">
           <div class="u-form-group">
             <input 
                 name="email" 
                 type="email" 
                 placeholder="Email"
+                required="true"
             />
           </div>
           <div class="u-form-group">
@@ -42,13 +43,12 @@
                 name="password"
                 type="password" 
                 placeholder="Password"
+                required="true"
             />
           </div>
          
           <div class="u-form-group">
-            <a href="/profile/%>">
             <button type="submit">Log in</button>
-          </a>
           </div>
           
           <div class="u-form-group">
@@ -56,12 +56,22 @@
           </div>
         </form>
         
-        <form class="email-signup" method="POST" action="/profile">
+        <form class="email-signup" method="POST" action="/new_user" >
+          <div class="u-form-group">
+            <input 
+                name="name" 
+                type="text" 
+                placeholder="Name"
+                required="true"
+            />
+          </div>
+
           <div class="u-form-group">
             <input 
                 name="email" 
                 type="email" 
                 placeholder="Email"
+                required="true"
             />
           </div>
 
@@ -70,18 +80,12 @@
                 name="password"
                 type="password" 
                 placeholder="Password"
+                required="true"
             />
           </div>
 
           <div class="u-form-group">
-            <input 
-                name="password"
-                type="password" 
-                placeholder="Confirm Password"
-            />
-          </div>
-          <div class="u-form-group">
-            <button>Sign Up</button>
+            <button type="submit">Sign Up</button>
           </div>
         </form>
       </div>

@@ -14,14 +14,15 @@ const knex = require('./db/knex');
 const showdown = require('showdown');
 // app.use(showdown);
 
+app.use(methodOverride('_method'))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 const login = require('./routes/user_route');
 app.use(login);
 const quiz = require('./routes/quiz_route')
 app.use(quiz);
 
-app.use(methodOverride('_method'))
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join('public')));
 
