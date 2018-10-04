@@ -8,13 +8,13 @@
     </head>
     <body>
 
-    <%- include('partials/navbar') %>
-    <h1>Quiz Page</h1>
-    
-    <div style="display: flex; flex-direction: column">
-      <% quizzes.forEach((quiz) => { %>
-        <%- include('partials/quiz', { quiz: quiz }) %>
-      <% }); %>
+    <%- include('../partials/navbar') %>
+
+    <h1><%= quiz.name %></h1>
+
+
+    <div class="quiz_content" style="display: flex; flex-direction: column; border: solid red; max-width: 80%;">
+        <%- include('../partials/questions') %>
     </div>
 
 

@@ -1,5 +1,19 @@
-console.warn('CHECK ME OUT');
-document.getElementById("quizButton").addEventListener("click", function(){
-    // document.getElementById("demo").innerHTML = "Hello World";
-    console.log('CLICKED');
-});
+console.warn('CONNECTED');
+
+
+
+// document.getElementById('quizName').addEventListener('click', (ev) => {
+
+// });
+
+
+    // (function goToQuiz() {
+    //   let quizId = localStorage.getItem('id');
+
+    //     fetch(`/quiz/${quizId}`, {
+    //     method: "GET"
+    //     })
+    //       console.log(quizObj);
+        
+    // })();
+  

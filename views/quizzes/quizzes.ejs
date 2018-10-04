@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Brain Juice</title>
+        <link rel="stylesheet" href="/styles/style.css">
+    </head>
+    <body>
+    <%- include('../partials/navbar') %>
+    <h1>Quiz Options</h1>
+
+        <div class="sidebar">
+            <div class="dropdown">
+                <button class="dropbtn">Sort By (descending)</button>
+                <div class="dropdown-content">
+                    <a href="/difficulty">Difficulty (asc.)</a>
+                    <a href="/difficulty">Difficulty (des.)</a>
+                </div>
+            </div>
+        </div>
+    
+    <div style="display: flex; justify-content: space-around;  border: solid purple;">
+      <% quizzes.forEach((quiz) => { %>
+
+        <div style="display: flex; flex-direction: column; border:solid red; text-align: center; ">
+            <a href="/quiz/<%=quiz.id%>" style="flex: 1;">
+                <h2 id="quizName"><%= quiz.name %></h2>
+            </a>
+
+            <div style="border: dashed grey;">
+                <h3>Difficulty: <%= quiz.difficulty %></h3>
+                <h3>Question Count: <%= quiz.question_count %></h3>
+                <h4>On click, navigate to quiz page where all questions displayed.</h4>
+            </div>
+        </div>
+
+      <% }); %>
+    </div>
+
+
+    <script src="/quizzes.js"></script>
+    </body>
+</html> 

@@ -1,0 +1,9 @@
+<% let questions = quiz.questions %>
+<% questions.forEach((question) => { %>
+    <%= question.content %>
+    
+    <div style="border: dashed greenyellow">
+            
+        <%= JSON.stringify(question.choices[0].text) %>
+    </div>
+<% }); %>

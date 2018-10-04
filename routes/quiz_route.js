@@ -1,26 +1,30 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
 const knex = require('../db/knex');
-const quizzes = require('../data/questions.json');
 
 // GENERAL/BASE LEVEL
 router.get('/quizzes', (req, res) => {
-    // knex('questions')
-        res.render('quizzes', {
-            quizzes: quizzes
-        });
+    // Knex returns a promise.
+    knex.select().table('quizzes')
+    .then((data) => { // When promise resolves, it will resolve with result of query.
+      res.render('quizzes/quizzes', {
+        quizzes: data
+      });
+    }).catch((error) => {
+      console.warn('Error city');
+    })
 });
 
-router.get('/quizzes/quiz/:id', (req, res) => {
-    const quizById = quizzes.findIndex((quiz) => quiz.id === req.params.id);
-    console.log('id', req.params.id)
-    console.warn('Here is the id', quizById);
-
-    res.render('quizzes', {
-        quizzes: quizzes
-    });
+router.get('/quiz/:id', (req, res) => {
+    const quizId = req.params.id;
+    knex('quizzes').where('id', quizId)
+    .then((data) => {
+      res.render('quizzes/quiz', {
+        quiz: data[0]
+      });
+    }).catch()
 });
+
 
 module.exports = router;
   
