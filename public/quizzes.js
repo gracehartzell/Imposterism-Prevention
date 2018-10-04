@@ -1,19 +1,26 @@
 console.warn('CONNECTED');
 
+let button = document.getElementById('answerChoice');
 
 
-// document.getElementById('quizName').addEventListener('click', (ev) => {
+for (var i = 0 ; i < button.length; i++) {
+    button[i].addEventListener('click' , (ev) => {
+        return correctAnswer();
+    }) ; 
+}
 
-// });
 
 
-    // (function goToQuiz() {
-    //   let quizId = localStorage.getItem('id');
+function correctAnswer() {
+    if (button === 'true') {
+        console.warn('CORRECT ANSWER');
+    }
+    else {
+        alert('NOPE');
+    }
+}
 
-    //     fetch(`/quiz/${quizId}`, {
-    //     method: "GET"
-    //     })
-    //       console.log(quizObj);
-        
-    // })();
-  
+
+// const quizContainer = document.getElementById('quiz');
+// const resultsContainer = document.getElementById('results');
+// const submitButton = document.getElementById('submit');

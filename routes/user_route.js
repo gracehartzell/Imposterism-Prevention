@@ -10,6 +10,11 @@ router.get('/profile', (req, res) => {
         res.render('users/user')
 });
 
+router.get('/heh', (req, res) => {
+  // knex('questions')
+      res.render('heh')
+});
+
 
 // router.post('/', (req, res, next) => {
 //     bcrypt.hash(req.body.password, 12)

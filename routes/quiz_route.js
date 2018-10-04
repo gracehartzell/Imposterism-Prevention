@@ -25,6 +25,21 @@ router.get('/quiz/:id', (req, res) => {
     }).catch()
 });
 
+router.get('/difficulty', (req, res, next) => {
+  knex('quizzes')
+    .orderBy('difficulty', 'desc')
+    .then((quizzes) => {
+      res.render('quizzes/quizzes', {quizzes});
+    });
+});
+
+router.get('/difficultyasc', (req, res, next) => {
+  knex('quizzes')
+    .orderBy('difficulty', 'asc')
+    .then((quizzes) => {
+      res.render('quizzes/quizzes', {quizzes});
+    });
+});
 
 module.exports = router;
   

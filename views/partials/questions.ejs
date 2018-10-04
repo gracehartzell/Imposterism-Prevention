@@ -1,9 +1,34 @@
+
 <% let questions = quiz.questions %>
+<div>
 <% questions.forEach((question) => { %>
     <%= question.content %>
-    
-    <div style="border: dashed greenyellow">
+            <code style="border: solid fuchsia;"><%=question.code_snippet %></code>
             
-        <%= JSON.stringify(question.choices[0].text) %>
+            <div style="border: dashed greenyellow">
+                <p class="answerContent">
+                <button id="answerChoice">A</button>
+            <%= JSON.stringify(question.choices[0].text) %>
+            </p>
+            <p class="answerContent">
+                <button id="answerChoice">B</button>
+                <%= JSON.stringify(question.choices[1].text) %>
+            </p>
+            <p class="answerContent">
+                <button id="answerChoice">C</button>
+                <%= JSON.stringify(question.choices[2].text) %>
+            </p>
+            <p class="answerContent">
+                <button id="answerChoice">D</button>
+                <%= JSON.stringify(question.choices[3].text) %>
+            </p>
+            <p class="answerContent">
+                <button id="answerChoice">E</button>
+                <%= JSON.stringify(question.choices[4].text) %>
+            </p>
+        
+        </div>
+        <% }); %>
+
     </div>
-<% }); %>
+    

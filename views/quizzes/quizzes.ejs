@@ -4,7 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Brain Juice</title>
+        <link rel="stylesheet" href="/styles/quiz.css">
         <link rel="stylesheet" href="/styles/style.css">
+
     </head>
     <body>
     <%- include('../partials/navbar') %>
@@ -12,17 +14,17 @@
 
         <div class="sidebar">
             <div class="dropdown">
-                <button class="dropbtn">Sort By (descending)</button>
+                <button class="dropbtn">Sort By</button>
                 <div class="dropdown-content">
-                    <a href="/difficulty">Difficulty (asc.)</a>
+                    <a href="/difficultyasc">Difficulty (asc.)</a>
                     <a href="/difficulty">Difficulty (des.)</a>
                 </div>
             </div>
         </div>
-    
-    <div style="display: flex; justify-content: space-around;  border: solid purple;">
-      <% quizzes.forEach((quiz) => { %>
 
+            <!-- <div style="display: flex; justify-content: space-around;  border: solid purple;"> -->
+      <% quizzes.forEach((quiz) => { %>
+<!-- 
         <div style="display: flex; flex-direction: column; border:solid red; text-align: center; ">
             <a href="/quiz/<%=quiz.id%>" style="flex: 1;">
                 <h2 id="quizName"><%= quiz.name %></h2>
@@ -31,14 +33,44 @@
             <div style="border: dashed grey;">
                 <h3>Difficulty: <%= quiz.difficulty %></h3>
                 <h3>Question Count: <%= quiz.question_count %></h3>
-                <h4>On click, navigate to quiz page where all questions displayed.</h4>
             </div>
         </div>
 
       <% }); %>
-    </div>
+    </div> -->
+
+    
+    <section class="gallery-block cards-gallery"> 
+        <div class="container">
+            <div class="heading">
+                <h6>No. Available Quizzes: 
+                    <%= quizzes.length %> </h6>
+            </div>
+        <div class="row">
+                <% quizzes.forEach((quiz) => { %>
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a href="/quiz/<%=quiz.id%>"><h2 id="quizName"><%= quiz.name %></h2></a>
+                    <div class="card-body">
+
+                        <p class="text-muted card-text"> 
+                            Difficulty: <%= quiz.difficulty %><br>
+                            Question Count: <%= quiz.question_count %><br>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <% })%>
+            
+	        </div>
+		</div>
+		
+	</section>
+
 
 
     <script src="/quizzes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     </body>
 </html> 

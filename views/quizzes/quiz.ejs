@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Brain Juice</title>
         <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="/styles/quiz.css">
+
     </head>
     <body>
 
@@ -13,9 +15,12 @@
     <h1><%= quiz.name %></h1>
 
 
-    <div class="quiz_content" style="display: flex; flex-direction: column; border: solid red; max-width: 80%;">
+    <div id="quiz" style="display: flex; flex-direction: column; border: solid red; max-width: 80%;">
         <%- include('../partials/questions') %>
     </div>
+
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>
 
 
     <script src="/quizzes.js"></script>
