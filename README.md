@@ -12,6 +12,11 @@ Do you ever feel like you don't belong where you are? Maybe you know you're righ
 ```
 nodemon server.js
 ```
+## Screenshots
+Here are some quiz views from my phone!
+<img src="comps/mobile_quizzes.jpg">
+<img src="comps/mobile_quiz.jpg">
+<img src="comps/mobile_questions.jpg">
 
 
 **To View without Using**
