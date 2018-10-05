@@ -64,7 +64,7 @@ let questions =[
                     {"text":"a Promise object that resolves with `[\"js\", \"node\", \"react\"]`","isAnswer":false}
                 ],
                 "content":"Assume `fetchTags()` returns a Promise that will eventually resolve with `['js', 'node', 'REACT']`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n\n",
-                "code_snippet": "```javascript\nvar result = null;\nfetchTags()\n  .then(function(tags) {\n    return tags.map(toUpperCase);\n  })\n  .then(function(tags) {\n    result = tags\n  })\n\nfunction toUpperCase (str) { return str.toUpperCase() }\n```",
+                "code_snippet": "\nvar result = null;\nfetchTags()\n  .then(function(tags) {\n    return tags.map(toUpperCase);\n  })\n  .then(function(tags) {\n    result = tags\n  })\n\nfunction toUpperCase (str) { return str.toUpperCase() }\n",
                 "index":3,
                 "isCorrect":false,
                 "answer":{
@@ -81,7 +81,7 @@ let questions =[
                     {"text":"a Promise object that resolves with `[\"JS\", \"NODE\", \"REACT\"]`","isAnswer":false}
                 ],
                 "content":"Assume `fetchTags()` returns a Promise that eventually will resolve with `[\"js\", \"node\", \"REACT\"]`.\n\nWhen all promises resolve, what will be the final value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar result = fetchTags()\n\nresult.then(function(tags) {\n  return tags.map(toUpperCase)\n})\n\nfunction toUpperCase (str) { return str.toUpperCase() }\n```",
+                "code_snippet": "\nvar result = fetchTags()\n\nresult.then(function(tags) {\n  return tags.map(toUpperCase)\n})\n\nfunction toUpperCase (str) { return str.toUpperCase() }\n",
                 "index":4,
                 "isCorrect":false,
                 "answer":{
@@ -98,7 +98,7 @@ let questions =[
                     {"text":"A promise that resolves with (a promise that resolves with `{ name: \"Alice\" }`)","isAnswer":false}
                 ],
                 "content":"Assume the following:\n\n- `fetchIds()` returns a Promise that eventually resolves with `[10,20,30]`\n- `fetchUser(10)` returns a Promise that eventually resolves with `{ name: \"Alice\" }`\n\nWhen all promises resolve, what will be the final value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar result = fetchIds()\n  .then(function(ids) {\n    return fetchUser( ids[0] )\n  })\n```",
+                "code_snippet": "\nvar result = fetchIds()\n  .then(function(ids) {\n    return fetchUser( ids[0] )\n  })\n",
                 "index":5,
                 "isCorrect":false,
                 "answer":{
@@ -115,7 +115,7 @@ let questions =[
                     {"text":"A promise that resolves with (a promise that resolves with { name: \"Alice\" })","isAnswer":false}
                 ],
                 "content":"Assume the following:\n\n- `fetchIds()` returns a Promise that eventually resolves with `[10,20,30]`\n- `fetchUser(10)` returns a Promise that eventually resolves with `{ name: \"Alice\" }`\n\nWhen all promises resolve, what will be the final value of `result`?\n\n\n",
-                "code_snippet": "```javascript\nvar result = fetchIds()\n  .then(function(ids) {\n    return fetchUser( ids[0] )\n  })\n  .then(function(value) {\n    return value\n  })\n```",
+                "code_snippet": "\nvar result = fetchIds()\n  .then(function(ids) {\n    return fetchUser( ids[0] )\n  })\n  .then(function(value) {\n    return value\n  })\n",
                 "index":6,
                 "isCorrect":false,
                 "answer":{
@@ -139,7 +139,7 @@ let questions =[
                     {"text":"50","isAnswer":false}
                 ],
                 "content":"After the following code runs, what will be the value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar x = 30;\n\nfunction get () { return x; }\n\nvar result = get(20);\n```",
+                "code_snippet": "\nvar x = 30;\n\nfunction get () { return x; }\n\nvar result = get(20);\n",
                 "index":0,
                 "isCorrect":false,
                 "answer": 
@@ -156,7 +156,7 @@ let questions =[
                     {"text":"50", "isAnswer":false}
                 ],
                 "content":"After the following code runs, what will be the value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar x = 30;\n\nfunction get (x) { return x; }\n\nvar result = get(20);\n```",
+                "code_snippet": "\nvar x = 30;\n\nfunction get (x) { return x; }\n\nvar result = get(20);\n",
                 "index":1,
                 "isCorrect":false,
                 "answer": {
@@ -172,7 +172,7 @@ let questions =[
                     {"text":"50", "isAnswer":false}
                 ],
                 "content":"After the following code runs, what will be the value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar x = 30;\n\nfunction get () { return x; }\nfunction set (value) { var x = value; }\n\nset(10);\nvar result = get(20);\n```",
+                "code_snippet": "\nvar x = 30;\n\nfunction get () { return x; }\nfunction set (value) { var x = value; }\n\nset(10);\nvar result = get(20);\n",
                 "index":2,
                 "isCorrect":false,
                 "answer": {
@@ -189,7 +189,7 @@ let questions =[
                     {"text":"50","isAnswer":false}
                 ],
                 "content":"After the following code runs, what will be the value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar x = 30;\n\nfunction get () { return x; }\nfunction set (value) { x = value; }\n\nset(10);\nvar result = get(20);\n```",
+                "code_snippet": "\nvar x = 30;\n\nfunction get () { return x; }\nfunction set (value) { x = value; }\n\nset(10);\nvar result = get(20);\n",
                 "index":3,
                 "isCorrect":false,
                 "answer":{
@@ -206,7 +206,7 @@ let questions =[
                     {"text":"50","isAnswer":false}
                 ],
                 "content":"After the following code runs, what will be the value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar x = 30;\n\nfunction get (x) { return x; }\nfunction set (value) { x = value; }\n\nset(10);\nvar result = get(20);\n```",
+                "code_snippet": "\nvar x = 30;\n\nfunction get (x) { return x; }\nfunction set (value) { x = value; }\n\nset(10);\nvar result = get(20);\n",
                 "index":4,
                 "isCorrect":false,
                 "answer":{
@@ -223,7 +223,7 @@ let questions =[
                     {"text":"30","isAnswer":true}
                 ],
                 "content":"After the following code runs, what will be the value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar x = 10;\n\nfunction add (y) {\n  return x + y;\n}\n\nfunction strangeAdd (x) {\n  return add(x) + add(x);\n}\n\nvar result = strangeAdd(5);\n```",
+                "code_snippet": "\nvar x = 10;\n\nfunction add (y) {\n  return x + y;\n}\n\nfunction strangeAdd (x) {\n  return add(x) + add(x);\n}\n\nvar result = strangeAdd(5);\n",
                 "index":5,
                 "isCorrect":false,
                 "answer":{
@@ -240,7 +240,7 @@ let questions =[
                     {"text":"30","isAnswer":false}
                 ],
                 "content":"After the following code runs, what will be the value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar x = 10;\n\nfunction outer () {\n  var x = 20;\n  function inner () {\n    return x;\n  }\n  return inner();\n}\n\nvar result = outer();\n```",
+                "code_snippet": "\nvar x = 10;\n\nfunction outer () {\n  var x = 20;\n  function inner () {\n    return x;\n  }\n  return inner();\n}\n\nvar result = outer();\n",
                 "index":6,
                 "isCorrect":false,
                 "answer":{
@@ -257,7 +257,7 @@ let questions =[
                     {"text":"45","isAnswer":false}
                 ],
                 "content":"After the following code runs, what will be the value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar x = 10;\n\nfunction outer () {\n  var x = 20;\n  function inner () {\n    x = x + 10;\n    return x;\n  }\n  inner();\n}\n\nouter();\n\nvar result = x;\n```",
+                "code_snippet": "\nvar x = 10;\n\nfunction outer () {\n  var x = 20;\n  function inner () {\n    x = x + 10;\n    return x;\n  }\n  inner();\n}\n\nouter();\n\nvar result = x;\n",
                 "index":7,
                 "isCorrect":false,
                 "answer":{
@@ -275,7 +275,7 @@ let questions =[
 
                 ],
                 "content":"After the following code runs, what will be the value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar x = 10;\n\nfunction outer () {\n  x = 20;\n  function inner () {\n    var x = x + 20;\n    return x;\n  }\n  inner();\n}\n\nouter();\n\nvar result = x;\n```",
+                "code_snippet": "\nvar x = 10;\n\nfunction outer () {\n  x = 20;\n  function inner () {\n    var x = x + 20;\n    return x;\n  }\n  inner();\n}\n\nouter();\n\nvar result = x;\n",
                 "index":8,
                 "isCorrect":false,
                 "answer":{
@@ -292,7 +292,7 @@ let questions =[
                     {"text":"50","isAnswer":false}
                 ],
                 "content":"After the following code runs, what will be the value of `result`?\n\n",
-                "code_snippet": "```javascript\nvar x = 10;\n\nfunction outer () {\n  x = 20;\n  function inner () {\n    x = x + 20;\n  }\n  inner();\n}\n\nouter();\n\nvar result = x;\n```",
+                "code_snippet": "\nvar x = 10;\n\nfunction outer () {\n  x = 20;\n  function inner () {\n    x = x + 20;\n  }\n  inner();\n}\n\nouter();\n\nvar result = x;\n",
                 "index":9,
                 "isCorrect":false,
                 "answer":{
@@ -316,7 +316,7 @@ let questions =[
                     {"text":"`Bob says hi`, after 1 second","isAnswer":false}
                 ],
                 "content":"What message will eventually be alerted? After how long?\n\n",
-                "code_snippet": "```javascript\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(function() {\n  alice.sayHi();\n}, 1000);\n```",
+                "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(function() {\n  alice.sayHi();\n}, 1000);\n",
                 "index":0,
                 "isCorrect":false,
                 "answer": 
@@ -333,7 +333,7 @@ let questions =[
                     {"text":"`Alice says hi`, immediately","isAnswer":false}
                 ],
                 "content":"What message will eventually be alerted? After how long?\n\n",
-                "code_snippet": "```javascript\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi, 1000);\n```",
+                "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi, 1000);\n",
                 "index":1,
                 "isCorrect":false,
                 "answer": {
@@ -349,7 +349,7 @@ let questions =[
                     {"text":"`Bob says hi`, immediately","isAnswer":false}
                 ],
                 "content":"What message will eventually be alerted? After how long?\n\n",
-                "code_snippet": "```javascript\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.bind(alice), 1000);\n```",
+                "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.bind(alice), 1000);\n",
                 "index":2,
                 "isCorrect":false,
                 "answer": {
@@ -366,7 +366,7 @@ let questions =[
                     {"text":"`Bob says hi`, immediately","isAnswer":false}
                 ],
                 "content":"What message will eventually be alerted? After how long?\n\n",
-                "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi(), 1000);\n```",
+                "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi(), 1000);\n",
                 "index":3,
                 "isCorrect":false,
                 "answer":{
@@ -383,7 +383,7 @@ let questions =[
                     {"text":"`Bob says hi`, after 1 second","isAnswer":true}
                 ],
                 "content":"What message will eventually be alerted? After how long?\n\n",
-                "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.bind(bob), 1000);\n```",
+                "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.bind(bob), 1000);\n",
                 "index":4,
                 "isCorrect":false,
                 "answer":{
@@ -401,7 +401,7 @@ let questions =[
             
                 ],
                 "content":"What message will eventually be alerted? After how long?\n\n",
-                "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.call(bob), 1000);\n```",
+                "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.call(bob), 1000);\n",
                 "index":5,
                 "isCorrect":false,
                 "answer":{
@@ -418,7 +418,7 @@ let questions =[
                     {"text":"`Bob says hi`, immediately","isAnswer":false}
                 ],
                 "content":"What message will eventually be alerted? After how long?\n\n",
-                "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nbob.sayHi = alice.sayHi\n\nsetTimeout(bob.sayHi, 1000);\n```",
+                "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nbob.sayHi = alice.sayHi\n\nsetTimeout(bob.sayHi, 1000);\n",
                 "index":6,
                 "isCorrect":false,
                 "answer":{
@@ -435,7 +435,7 @@ let questions =[
                     {"text":"`Bob says hi`, after 1 second","isAnswer":true}
                 ],
                 "content":"What message will eventually be alerted? After how long?\n\n",
-                "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nvar sayHi = alice.sayHi.bind(bob)\n\nsetTimeout(function () {\n  window.sayHi()\n}, 1000);\n```",
+                "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nvar sayHi = alice.sayHi.bind(bob)\n\nsetTimeout(function () {\n  window.sayHi()\n}, 1000);\n",
                 "index":7,
                 "isCorrect":false,
                 "answer":{
@@ -452,7 +452,7 @@ let questions =[
                     {"text":"`Bob says hi`, immediately","isAnswer":false}                
                 ],
                 "content":"What message will eventually be alerted? After how long?\n\n",
-                "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\n\nalice.sayHi.bind(bob);\n\nsetTimeout(alice.sayHi(), 1000);\n```",
+                "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\n\nalice.sayHi.bind(bob);\n\nsetTimeout(alice.sayHi(), 1000);\n",
                 "index":8,
                 "isCorrect":false,
                 "answer":{
@@ -476,7 +476,7 @@ let questions =[
                     {"text":"None exists","isAnswer":false}
                 ],
                 "content":"What is Grace's cat's name?",
-                // "code_snippet": "```javascript\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(function() {\n  alice.sayHi();\n}, 1000);\n```",
+                // "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(function() {\n  alice.sayHi();\n}, 1000);\n",
                 "index":0,
                 "isCorrect":false,
                 "answer": 
@@ -493,7 +493,7 @@ let questions =[
                     {"text":"Hot Pockets","isAnswer":false}
                 ],
                 "content":"What is Grace's favorite food to cook?",
-                // "code_snippet": "```javascript\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi, 1000);\n```",
+                // "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi, 1000);\n",
                 "index":1,
                 "isCorrect":false,
                 "answer": {
@@ -509,7 +509,7 @@ let questions =[
                     {"text":"Dumpster out back","isAnswer":false}
                 ],
                 "content":"Where does Grace live?",
-                // "code_snippet": "```javascript\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.bind(alice), 1000);\n```",
+                // "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.bind(alice), 1000);\n",
                 "index":2,
                 "isCorrect":false,
                 "answer": {
@@ -526,7 +526,7 @@ let questions =[
                     {"text":"Alaska in the summer","isAnswer":false}
                 ],
                 "content":"What's Grace's favorite weather?",
-                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi(), 1000);\n```",
+                // "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi(), 1000);\n",
                 "index":3,
                 "isCorrect":false,
                 "answer":{
@@ -543,7 +543,7 @@ let questions =[
                     {"text":"Black Pepper","isAnswer":true}
                 ],
                 "content":"What is Grace most allergic to?",
-                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.bind(bob), 1000);\n```",
+                // "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.bind(bob), 1000);\n",
                 "index":4,
                 "isCorrect":false,
                 "answer":{
@@ -561,7 +561,7 @@ let questions =[
             
                 ],
                 "content":"What is Grace doing on 20-21 October?",
-                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.call(bob), 1000);\n```",
+                // "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.call(bob), 1000);\n",
                 "index":5,
                 "isCorrect":false,
                 "answer":{
@@ -578,7 +578,7 @@ let questions =[
                     {"text":"4 pins, 7 rods, and 3 plates","isAnswer":false}
                 ],
                 "content":"How much metal does Grace have inside her?",
-                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nbob.sayHi = alice.sayHi\n\nsetTimeout(bob.sayHi, 1000);\n```",
+                // "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nbob.sayHi = alice.sayHi\n\nsetTimeout(bob.sayHi, 1000);\n",
                 "index":6,
                 "isCorrect":false,
                 "answer":{
@@ -595,7 +595,7 @@ let questions =[
                     {"text":"She needed lots of review on Q1 topics","isAnswer":true}
                 ],
                 "content":"Why did Grace choose this as a project?",
-                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nvar sayHi = alice.sayHi.bind(bob)\n\nsetTimeout(function () {\n  window.sayHi()\n}, 1000);\n```",
+                // "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nvar sayHi = alice.sayHi.bind(bob)\n\nsetTimeout(function () {\n  window.sayHi()\n}, 1000);\n",
                 "index":7,
                 "isCorrect":false,
                 "answer":{
@@ -612,7 +612,7 @@ let questions =[
                     {"text":"Favorite thing ever","isAnswer":false}                
                 ],
                 "content":"Did Grace enjoy this project?",
-                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\n\nalice.sayHi.bind(bob);\n\nsetTimeout(alice.sayHi(), 1000);\n```",
+                // "code_snippet": "\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\n\nalice.sayHi.bind(bob);\n\nsetTimeout(alice.sayHi(), 1000);\n",
                 "index":8,
                 "isCorrect":false,
                 "answer":{
