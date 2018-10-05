@@ -45,6 +45,37 @@ router.post('/user_login', (req, res) => knex('users')
   .then((users) => {
     res.render('users/profile', { users });
   }));
+  
+// EDIT CURRENT USER
+router.get('/edit_user/:id', function(req, res, next) {  
+  knex('users').where('id',req.params.id).then((users)=>{
+    if(!users) {
+      return next();
+    }
+        res.render('users/edit_user',{users}); 
+  })
+    .catch((err)=>{
+    next(err);
+    })
+});  
 
+router.patch('/edit_user/:id',(req,res, next)=>{
+  knex('users')
+    .where('id',req.params.id)
+    .then((users) => {
+    knex('users')
+      .update({ 
+          name: req.body.name,
+          email: req.body.email,
+          password: req.body.password}, '*')
+      .where('id',req.params.id)
+      .then(() => {
+        res.redirect(302, '/profile');
+      });
+    })
+    .catch((err)=>{
+      next(err);
+    })
+}); 
 
 module.exports = router;
