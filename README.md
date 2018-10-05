@@ -26,7 +26,7 @@ Here are some quiz views from my phone!
 ## Database
 I used two tables, users and questions, but focused primarily on getting the questions table up and working. As you can check out in the blog, getting it set up was very tricky and very much outside of my realm of knowledge. Consequently, everything outside the realm of the quiz itself was not fully developed. 
 
-**Quiz/Questions**
+* **Quiz/Questions**
 All of the quizzes were exported from a JavaScript file as JSON and then uploaded to the database from there. Feel free to check out the data file to see just how in depth it went and get an idea as to why it took so long to manipulate. This is how I eventually seeded the quiz data:
  ```js
 // Dummy created for testing.
@@ -55,7 +55,7 @@ function addQuizData(knex, quiz) {
 };
  ```
 
-**Users**
+* **Users**
 As far as the user portal is concerned, you can add a new user to the table via the sign up page. I was not able to issue a token or authenticate pre-registered users. This is something that I'd like to be able to do in the future. Another reach goal is to be able to link the users to quizzes that they've taken. 
 
 All in all, I'm not very pleased with the outcome but I do recognize that the majority of the work was well outside of my comfort zone. 
