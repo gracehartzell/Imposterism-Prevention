@@ -4,8 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Brain Juice</title>
-        <link rel="stylesheet" href="/styles/quiz.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="/styles/quiz.css">
 
     </head>
     <body>
@@ -15,9 +16,11 @@
         <div class="sidebar">
             <div class="dropdown">
                 <button class="dropbtn">Sort By</button>
-                <div class="dropdown-content">
-                    <a href="/difficultyasc">Difficulty (asc.)</a>
-                    <a href="/difficulty">Difficulty (des.)</a>
+                <div id="dropdown-content">
+                    <a href="/difficultyasc">Difficulty <i class="fas fa-sort-numeric-up"></i></a>
+                    <a href="/difficulty">Difficulty <i class="fas fa-sort-numeric-down"></i></a>
+                    <a href="/lengthasc">Length <i class="fas fa-sort-amount-up"></i></a>
+                    <a href="/length">Length <i class="fas fa-sort-amount-down"></i></a>
                 </div>
             </div>
         </div>

@@ -187,5 +187,17 @@ nav {
     font-size: 0.75rem;
   }
 
+/****************** PROFILE PAGE ******************/
+.profile {
+  text-align: left;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+
  
 
