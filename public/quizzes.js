@@ -3,10 +3,12 @@ let incorrect = 0;
 const alreadyAnswered = [];
 
 
+let correctDisplay = document.getElementById('correct');
 const buttons = Array.from(document.getElementsByClassName('answerChoice'));
 
 function onButtonClick(currentButton) {
-
+  console.log({ correct, incorrect, alreadyAnswered })
+  
   const isAnswer = currentButton.getAttribute("data-answer");
   const questionIndex = currentButton.getAttribute("data-question");
   
@@ -19,6 +21,8 @@ function onButtonClick(currentButton) {
     currentButton.style.background = "green"
     if(!questionAnsweredAlready) { // Only update if this is the first time answering this question
       correct++;
+      correctDisplay.innerText = correct;
+
     }
     const btns = Array.from(document.querySelectorAll(`[data-question='${questionIndex}']`));
     
@@ -42,4 +46,5 @@ function onButtonClick(currentButton) {
     });
   };
 };
+
 
