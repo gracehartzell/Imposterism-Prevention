@@ -7,6 +7,7 @@
 
 .answerChoice:hover {
   background-color: rgb(118, 95, 148);
+  cursor: pointer;
 }
 
 .answerContent {
@@ -17,10 +18,11 @@ code {
     display: flex;
     align-content: center;
     background-color: rgb(206, 206, 206);
-    width: 60%;
+    width: 70%;
     margin: auto;
     margin-top: 10px;
     padding: 10px;
+    justify-content: center;
 }
 
 #quiz {
@@ -118,25 +120,28 @@ code {
  min-width: 120px;
  box-shadow: 2px 2px #606969e3;
  z-index: 1;
+ color: black;
 }
 
-#dropdown-content a {
+#dropdown-content li {
  color: black;
  padding: 12px 16px;
  text-decoration: none;
- display: block;
+ display: flex;
+ justify-content: space-between;
+ text-align: end;
+ text-decoration: none;
 }
 
-#dropdown-content a:hover,
-#dropdown-content i:hover {
+#dropdown-content li:hover {
   background-color: rgba(140, 140, 175, 0.836);
 }
 
 .dropdown:hover #dropdown-content {
  display: block;
 }
+
 .dropdown:hover .dropbtn {
  text-decoration: none;
  background-color: rgb(118, 95, 148);
 }
-
