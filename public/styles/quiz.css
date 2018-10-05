@@ -1,11 +1,11 @@
-#answerChoice {
-  background-color: rgb(178, 178, 224);
+.answerChoice {
+    background-color: rgb(178, 178, 224);
     margin-right: 15px;
     margin-left: 10px;
     padding: 10px 15px 10px 15px;
 }
 
-#answerChoice:hover {
+.answerChoice:hover {
   background-color: rgb(118, 95, 148);
 }
 
@@ -19,13 +19,17 @@ code {
     background-color: rgb(206, 206, 206);
     width: 60%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px;
 }
 
 #quiz {
+    display: flex;
+    flex-direction: column;
     margin: auto;
-    padding-top: 40px;
+    padding-top: 20px;
+    border: solid rgb(118, 95, 148);
+    max-width: 80%;
 }
 
 /* CARDS */

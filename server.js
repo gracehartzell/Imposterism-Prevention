@@ -13,23 +13,21 @@ const app = express();
 const knex = require('./db/knex');
 const showdown = require('showdown');
 // app.use(showdown);
+app.disable('x-powered-by');
 
 app.use(methodOverride('_method'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join('public')));
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine','ejs');
 
 const login = require('./routes/user_route');
 app.use(login);
 const quiz = require('./routes/quiz_route')
 app.use(quiz);
 
-
-app.use(express.static(path.join('public')));
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine','ejs');
-
-app.disable('x-powered-by');
 
 app.get('/', (req, res) => {
     res.render('index');

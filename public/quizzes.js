@@ -1,19 +1,45 @@
 console.log('CONNECTED');
-const questions = quiz.questions;
+
+let correct = 0;
+let incorrect = 0;
+const alreadyAnswered = [];
 
 const buttons = Array.from(document.getElementsByClassName('answerChoice'));
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    console.log(questions);
+
+function onButtonClick(currentButton) {
+  console.log({ correct, incorrect, alreadyAnswered })
+
+  const isAnswer = currentButton.getAttribute("data-answer");
+  const questionIndex = currentButton.getAttribute("data-question");
+  // Find out if this question has been answered.
+  let questionAnsweredAlready = alreadyAnswered.includes(questionIndex)
+  if(!questionAnsweredAlready) {
+    alreadyAnswered.push(questionIndex);
+  }
+  if (isAnswer === "true") {
+    currentButton.style.background = "green"
+    if(!questionAnsweredAlready) { // Only update if this is the first time answering this question
+      correct++;
+    }
+    const btns = Array.from(document.querySelectorAll(`[data-question='${questionIndex}']`));
     
-  });
-});
+    btns.forEach((button) => {
+      if(button !== currentButton) {
+        button.style.background = "#b2b2e0"
+      }
+    });
 
-
-
-
-
-
-// var converter = new showdown.Converter(),
-//     text = '# hello, markdown!',
-//     html = converter.makeHtml(text);
+  } else {
+    currentButton.style.background = "red"
+    if(!questionAnsweredAlready) { // Only update if this is the first time answering this question
+      incorrect++
+    }
+    const btns = Array.from(document.querySelectorAll(`[data-question='${questionIndex}']`));
+    
+    btns.forEach((button) => {
+      if(button !== currentButton) {
+        button.style.background = "#b2b2e0"
+      }
+    });
+  }
+}

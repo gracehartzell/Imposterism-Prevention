@@ -14,12 +14,12 @@
     <h1><%= quiz.name %></h1>
 
 
-    <div id="quiz" style="display: flex; flex-direction: column; border: solid red; max-width: 80%;">
+    <div id="quiz">
         <%- include('../partials/questions') %>
     </div>
 
-    <!-- <button id="submit">Submit Quiz</button> -->
-    <div id="results"></div>
+    <div id="results">
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>

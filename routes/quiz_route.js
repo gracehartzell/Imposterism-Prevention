@@ -26,20 +26,21 @@ router.get('/quiz/:id', (req, res, next) => {
     });
 });
 
-router.get('/difficulty', (res) => {
-  knex('quizzes')
-    .orderBy('difficulty', 'desc')
-    .then((quizzes) => {
-      res.render('quizzes/quizzes', { quizzes });
-    });
-});
 
-router.get('/difficultyasc', (res) => {
-  knex('quizzes')
-    .orderBy('difficulty', 'asc')
-    .then((quizzes) => {
-      res.render('quizzes/quizzes', { quizzes });
-    });
-});
+// router.get('/difficulty', (res) => {
+//   knex('quizzes')
+//     .orderBy('difficulty', 'desc')
+//     .then((quizzes) => {
+//       res.render('quizzes/quizzes', { quizzes });
+//     });
+// });
+
+// router.get('/difficultyasc', (res) => {
+//   knex('quizzes')
+//     .orderBy('difficulty', 'asc')
+//     .then((quizzes) => {
+//       res.render('quizzes/quizzes', { quizzes });
+//     });
+// });
 
 module.exports = router;

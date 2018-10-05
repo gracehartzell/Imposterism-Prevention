@@ -1,4 +1,4 @@
-const questions =[
+let questions =[
     {   "id": "666",
         "name": "Javascript Promises",
         "questionCount":10,

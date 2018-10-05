@@ -6,10 +6,10 @@
 }
 
 .main-content {
-  border: solid red;
   display: flex;
   text-align: center
 }
+
 a {
   text-decoration: none;
   color: rgb(75, 57, 99);
@@ -51,9 +51,9 @@ nav {
   }
 
   .logo-img{
-    border: solid green;
     position: relative;
-    background-color: rgb(178, 178, 224)
+    background-color: rgb(178, 178, 224);
+    padding-left: 10px;
   }
   
  /* ****************** LOGIN BOX ****************** */
