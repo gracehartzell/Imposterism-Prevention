@@ -6,7 +6,6 @@ const alreadyAnswered = [];
 const buttons = Array.from(document.getElementsByClassName('answerChoice'));
 
 function onButtonClick(currentButton) {
-  console.log({ correct, incorrect, alreadyAnswered })
 
   const isAnswer = currentButton.getAttribute("data-answer");
   const questionIndex = currentButton.getAttribute("data-question");

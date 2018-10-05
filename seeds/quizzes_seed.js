@@ -21,6 +21,6 @@ function addQuizData(knex, quiz) {
      questions: JSON.stringify(quiz.questions)
    }
  );
-}
+};
 
 
