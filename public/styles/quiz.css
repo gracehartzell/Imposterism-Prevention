@@ -101,6 +101,8 @@ code {
  padding: 3px;
  font-size: 12px;
  border-radius: 3px;
+ height: 2.5em;
+ width: 4.3em;
 }
 
 .dropdown {

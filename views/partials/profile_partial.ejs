@@ -1,17 +1,41 @@
 <h2 class="profile">Welcome, <%= users[0].name || users[0].email %>.</h2>
 
 <div class="options">
-    <button>
+  
+    <button >
       <i class="fas fa-user-edit"></i>
+        <a href="/edit"></a>
         Edit Profile
     </button>
+
     <button>
       <i class="far fa-plus-square"></i>
         Add Quiz
     </button>
+
     <button>
-      <i class="far fa-lightbulb"></i>      
+      <a href="/quizzes">
+        <i class="far fa-lightbulb"></i>      
         Take Quiz
+      </a>
     </button>
+
+</div>
+
+<div class="userStats">
+    <h4>You've completed 3 quizzes!</h4>
+    <ul>
+        <li>JavaScript Promises <br> 
+            Score: 7/10
+        </li>
+          <br>
+        <li>JavaScript Scope <br>
+            Score: 9/10
+        </li>
+          <br>
+        <li>JavaScript Function Binding <br>
+            Score: 5/9
+        </li>
+    </ul>
 </div>
 

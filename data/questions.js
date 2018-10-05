@@ -459,6 +459,166 @@ let questions =[
                     "expected":[2], "actual":[]}
             }
         ]
+    },
+
+    {   "id": "69",
+        "name": "Important Terms",
+        "questionCount":9,
+        "difficulty": 5,
+        "questions": [
+            {
+                "id":1,
+                "choices": [
+                    {"text":"George","isAnswer":false},
+                    {"text":"Peanut","isAnswer":false},
+                    {"text":"Captain","isAnswer":true},
+                    {"text":"Golum","isAnswer":false},
+                    {"text":"None exists","isAnswer":false}
+                ],
+                "content":"What is Grace's cat's name?",
+                // "code_snippet": "```javascript\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(function() {\n  alice.sayHi();\n}, 1000);\n```",
+                "index":0,
+                "isCorrect":false,
+                "answer": 
+                    {"expected":[2], "actual":[]}
+            },
+
+            { 
+                "id":2,
+                "choices": [
+                    {"text":"Indian","isAnswer":true},
+                    {"text":"Basghetti","isAnswer":false},
+                    {"text":"Salad","isAnswer":false},
+                    {"text":"Nothing. She cooks nothing.","isAnswer":false},
+                    {"text":"Hot Pockets","isAnswer":false}
+                ],
+                "content":"What is Grace's favorite food to cook?",
+                // "code_snippet": "```javascript\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi, 1000);\n```",
+                "index":1,
+                "isCorrect":false,
+                "answer": {
+                    "expected":[0],"actual":[]}
+            },
+            {
+                "id":3,
+                "choices":[
+                    {"text":"3503 Speedway","isAnswer":false},
+                    {"text":"2662 Nonyabidniss Rd.","isAnswer":true},
+                    {"text":"106 E. 30th St.","isAnswer":false},
+                    {"text":"Zilker Park","isAnswer":false},
+                    {"text":"Dumpster out back","isAnswer":false}
+                ],
+                "content":"Where does Grace live?",
+                // "code_snippet": "```javascript\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.bind(alice), 1000);\n```",
+                "index":2,
+                "isCorrect":false,
+                "answer": {
+                    "expected":[1], "actual":[]}
+            },
+            
+            {
+                "id":4,
+                "choices":[
+                    {"text":"Anything in Texas","isAnswer":false},
+                    {"text":"Medium-hot and muggy","isAnswer":false},
+                    {"text":"Max 50F and dry","isAnswer":true},
+                    {"text":"No opinion","isAnswer":false},
+                    {"text":"Alaska in the summer","isAnswer":false}
+                ],
+                "content":"What's Grace's favorite weather?",
+                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi(), 1000);\n```",
+                "index":3,
+                "isCorrect":false,
+                "answer":{
+                    "expected":[2], "actual":[]}
+            },
+            
+            {
+                "id":5,
+                "choices":[
+                    {"text":"Bees","isAnswer":false},
+                    {"text":"Red food coloring","isAnswer":false},
+                    {"text":"Uncooked eggs","isAnswer":false},
+                    {"text":"Parsley","isAnswer":false},
+                    {"text":"Black Pepper","isAnswer":true}
+                ],
+                "content":"What is Grace most allergic to?",
+                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.bind(bob), 1000);\n```",
+                "index":4,
+                "isCorrect":false,
+                "answer":{
+                    "expected":[4], "actual":[]}
+            },
+            
+            {
+                "id":6,
+                "choices":[
+                    {"text":"Going to prom","isAnswer":false},
+                    {"text":"Sleeping all day","isAnswer":false},
+                    {"text":"Weekend trip to Atlanta","isAnswer":false},
+                    {"text":"Finally going back to Big Bend","isAnswer":false},
+                    {"text":"A 180 mile bike ride","isAnswer":true}
+            
+                ],
+                "content":"What is Grace doing on 20-21 October?",
+                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nsetTimeout(alice.sayHi.call(bob), 1000);\n```",
+                "index":5,
+                "isCorrect":false,
+                "answer":{
+                    "expected":[4], "actual":[]}
+            },
+            
+            {
+                "id":7,
+                "choices":[
+                    {"text":"3 rods, 23 screws, 1 plate, and 7 pins","isAnswer":true},
+                    {"text":"None, she's never broken anything","isAnswer":false},
+                    {"text":"1 rod and 4 screws","isAnswer":false},
+                    {"text":"6 poles and a metal rope","isAnswer":false},
+                    {"text":"4 pins, 7 rods, and 3 plates","isAnswer":false}
+                ],
+                "content":"How much metal does Grace have inside her?",
+                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nbob.sayHi = alice.sayHi\n\nsetTimeout(bob.sayHi, 1000);\n```",
+                "index":6,
+                "isCorrect":false,
+                "answer":{
+                    "expected":[0], "actual":[]}
+            },
+            
+            {
+                "id":8,
+                "choices":[
+                    {"text":"Shady made me","isAnswer":false},
+                    {"text":"She's passionate about quizzes","isAnswer":false},
+                    {"text":"Her mom asked her to","isAnswer":false},
+                    {"text":"A friend suggested that it'd be cool","isAnswer":false},
+                    {"text":"She needed lots of review on Q1 topics","isAnswer":true}
+                ],
+                "content":"Why did Grace choose this as a project?",
+                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\nvar sayHi = alice.sayHi.bind(bob)\n\nsetTimeout(function () {\n  window.sayHi()\n}, 1000);\n```",
+                "index":7,
+                "isCorrect":false,
+                "answer":{
+                    "expected":[4], "actual":[]}
+            },
+            
+            {
+                "id":9,
+                "choices":[
+                    {"text":"Somewhat, yes","isAnswer":false},
+                    {"text":"Absolutely, so much","isAnswer":false},
+                    {"text":"How about no, Scott?","isAnswer":true},
+                    {"text":"Ask again in 3 weeks","isAnswer":false},
+                    {"text":"Favorite thing ever","isAnswer":false}                
+                ],
+                "content":"Did Grace enjoy this project?",
+                // "code_snippet": "```\nvar name = \"Window\";\nvar alice = {\n  name: \"Alice\",\n  sayHi: function() {\n    alert(this.name + \" says hi\");\n  }\n};\nvar bob = { name: \"Bob\" };\n\n\nalice.sayHi.bind(bob);\n\nsetTimeout(alice.sayHi(), 1000);\n```",
+                "index":8,
+                "isCorrect":false,
+                "answer":{
+                    "expected":[2], "actual":[]}
+            }
+        ]
     }
 
 ]
