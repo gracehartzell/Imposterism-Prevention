@@ -125,7 +125,6 @@ code {
 
 #dropdown-content li {
  color: black;
- padding: 12px 16px;
  text-decoration: none;
  display: flex;
  justify-content: space-between;
@@ -133,7 +132,21 @@ code {
  text-decoration: none;
 }
 
+.link_btn {
+  border: solid red;
+  padding: 12px 16px;
+  color: black;
+}
+
 #dropdown-content li:hover {
+  background-color: rgba(140, 140, 175, 0.836);
+}
+
+#dropdown-content li:hover .icon {
+  background-color: rgba(140, 140, 175, 0.836);
+}
+
+#dropdown-content a:hover  {
   background-color: rgba(140, 140, 175, 0.836);
 }
 
